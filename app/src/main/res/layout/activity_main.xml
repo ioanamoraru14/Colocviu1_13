@@ -58,7 +58,7 @@
         android:text="" />
 
     <Button
-        android:id="@+id/pressButton"
+        android:id="@+id/secondActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

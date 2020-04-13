@@ -2,6 +2,7 @@ package ro.pub.cs.systems.eim.colocviu1_13;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -61,6 +62,13 @@ public class Colocviu1_13MainActivity extends AppCompatActivity {
                     textView.setText(text);
                     nrPressedButton++;
                     break;
+                case R.id.secondActivity:
+                    Intent intent = new Intent("ro.pub.cs.systems.eim.colocviu1_13.Colocviu1_13SecondaryActivity");
+                    intent.putExtra("ro.pub.cs.systems.eim.colocviu1_13.Colocviu1_13SecondaryActivity.TEXT_KEY", textView.getText());
+                    startActivityForResult(intent, 2017);
+
+                    nrPressedButton = 0;
+                    textView.setText("");
             }
         }
     }
@@ -90,6 +98,13 @@ public class Colocviu1_13MainActivity extends AppCompatActivity {
         southButton.setOnClickListener(buttonClickListener);
         westButton.setOnClickListener(buttonClickListener);
         eastButton.setOnClickListener(buttonClickListener);
+
+        String actions = textView.getText().toString();
+        if (actions.length() > 0) {
+            Intent intent = new Intent("ro.pub.cs.systems.eim.colocviu1_13.Colocviu1_13SecondaryActivity");
+            intent.putExtra("ro.pub.cs.systems.eim.colocviu1_13.Colocviu1_13SecondaryActivity.TEXT_KEY", actions);
+            startActivityForResult(intent, 2017);
+        }
 
     }
 

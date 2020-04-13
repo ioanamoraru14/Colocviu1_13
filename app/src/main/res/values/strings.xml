@@ -6,4 +6,6 @@
     <string name="south">South</string>
     <string name="north_east_south_west">North, east, south, west</string>
     <string name="navigate_to_secondary_activity">Navigate_to_secondary_activity</string>
+    <string name="resigter">RESIGTER</string>
+    <string name="cancel">CANCEL</string>
 </resources>
